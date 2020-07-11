@@ -1,12 +1,12 @@
 import { createAction } from '@reduxjs/toolkit';
 
 const toggleTheme = createAction('theme/toggleTheme', (theme, isChecked) => ({
-  payload:
-  {
-    isChecked: false,
-    themeConfig: 'light',
+  payload: {
+    theme: {
+      isChecked: false,
+      themeConfig: 'light',
+    }
   }
-
 }));
 
 export default {

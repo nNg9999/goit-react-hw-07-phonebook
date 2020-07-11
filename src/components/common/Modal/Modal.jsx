@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Spinner from '../Loader';
+import Spinner from '../../common/Loader';
 
 import css from './Modal.module.css';
 

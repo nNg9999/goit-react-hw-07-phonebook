@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import rootModule from './rootModule';
 
+
+import { loadState, saveState } from "../utils/storage";
 // import logger from 'redux-logger';
 
 // console.log(typeof function () { });
@@ -41,8 +43,16 @@ import rootModule from './rootModule';
 
 const store = configureStore({
   reducer: rootModule,
+  preloadedState: loadState(),
   // applyMiddleware(logger),
   // middleware: [...defaultMiddleware], // под капотом есть можно убрать
+
 });
 
+
+store.subscribe(() => saveState(store.getState()));
+// store.subscribe(() => saveState({ theme: store.getState().theme }));
+
 export default store;
+
+

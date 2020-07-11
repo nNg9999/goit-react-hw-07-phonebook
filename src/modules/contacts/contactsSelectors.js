@@ -1,6 +1,6 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-
+const getContacts = state => state.contacts.items;
 const getItems = state => state.contacts.items;
 const getFilter = state => state.contacts.filter;
 
@@ -28,8 +28,10 @@ const getItemById = createSelector(
 
 
 export default {
+  getContacts,
   getItems,
   getVisibleContacts,
+  getFilter,
   getVC,
   getItemById,
 }

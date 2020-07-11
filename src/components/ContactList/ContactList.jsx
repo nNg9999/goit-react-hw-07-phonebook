@@ -6,8 +6,7 @@ import ContactListItem from "../ContactListItem/ContactListItem.Container";
 // redux
 import { connect } from "react-redux";
 import contactsSelectors from "../../modules/contacts/contactsSelectors";
-// import contactsActions from "../../redux/contacts/contactsActions";
-// import contactsActions from "../../modules/contacts/contactsActions";
+
 
 // styles
 import styles from '../ContactList/ContactList.module.scss';
@@ -48,7 +47,6 @@ const mapStateToProps = state => ({
 //     contacts: visibleContacts,
 //   };
 // };
-
 
 
 export default connect(mapStateToProps)(ContactList);

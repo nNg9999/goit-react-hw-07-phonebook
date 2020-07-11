@@ -1,11 +1,11 @@
 /* THEME SWITCH */
-.theme-switch {
+.themeSwitch {
   display: flex;
   align-items: center;
   transition: color 150ms ease-in 0;
 }
 
-.theme-switch__icon {
+.themeSwitch__icon {
   color: currentColor;
   height: 26px;
   margin-right: 8px;
@@ -39,7 +39,8 @@
   pointer-events: none;
 }
 
-.switch__input:checked+.switch__label {
+.switch__input:checked,
+.switch__label {
   background-color: #d3d3d4;
 }
 
@@ -47,8 +48,7 @@
   left: calc(100% - 29px);
 }
 
-.switch__input:focus+.switch__label,
-.switch__input:active+.switch__label {
+.switch__input:focus+.switch__label+.switch__input:active+.switch__label {
   box-shadow: 0 0 0 3px #2a6df433;
 }
 
@@ -82,7 +82,5 @@
 
 .toolbar {
   display: flex;
-  // width: 300px;
   justify-content: flex-end;
-  // padding: 16px 24px;
 }

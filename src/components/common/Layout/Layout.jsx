@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// context
-// import withThemeContext from '../../hoc/withThemeContext';
+
+// redux
 import { connect } from "react-redux";
+import themeSelector from '../../../modules/theme/themeSelector';
+
 // styles
 import styles from "./Layout.module.scss";
 
@@ -13,7 +15,7 @@ function Layout(props) {
   return (
     <div
       className={`${styles.container} ${
-        isChecked ? styles.dark : styles.light
+        isChecked.isChecked ? styles.dark : styles.light
         }`}
     >
       {children}
@@ -23,14 +25,14 @@ function Layout(props) {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  isChecked: PropTypes.bool.isRequired
+  isChecked: PropTypes.object.isRequired
 
 };
 
 const mapStateToProps = state => {
   return {
-    isChecked: state.theme.theme.isChecked,
-    theme: state.theme.theme.themeConfig,
+    theme: themeSelector.getThemeConfig(state),
+    isChecked: themeSelector.getIsChecked(state),
   };
 };
 

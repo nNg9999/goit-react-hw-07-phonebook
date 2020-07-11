@@ -7,12 +7,6 @@ import contactsOperation from "../../modules/contacts/contactsOperation";
 import contactsSelectors from "../../modules/contacts/contactsSelectors";
 
 
-// const ContactFormContainer = (props) => {
-//   return (
-//     <ContactForm {...props} />
-//   )
-// }
-
 const mapState = (state) => {
   const contacts = contactsSelectors.getItems(state);
   return { ...contacts }

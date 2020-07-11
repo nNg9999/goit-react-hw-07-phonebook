@@ -22,7 +22,7 @@ class AppContainer extends Component {
 
 const mapStateToProps = (state) => ({
   counterValue: counterSelectors.getValue(state),
-  contacts: contactsSelectors.getItems(state),
+  contacts: contactsSelectors.getContacts(state),
   visibleContacts: contactsSelectors.getVC(state),
   isLoadingContacts: state.contacts.loading,
 })

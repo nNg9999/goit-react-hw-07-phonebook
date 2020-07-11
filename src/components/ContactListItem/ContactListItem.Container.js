@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 import ContactListItem from "./ContactListItem";
 
-// import contactsActions from "../../redux/contacts/contactsActions";
 import contactsOperation from "../../modules/contacts/contactsOperation";
 import contactsSelectors from "../../modules/contacts/contactsSelectors";
 

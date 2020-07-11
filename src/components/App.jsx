@@ -2,16 +2,16 @@
 import React, { Component } from 'react';
 
 // Components
-import Layout from './Layout';
-import Section from './Section';
+import Layout from './common/Layout';
+import Section from './common/Section';
 import ContactForm from './ContactForm/ContactFormContainer';
 import ContactList from './ContactList';
 import Filter from './Filter';
 import ThemeToggler from './ThemeToggler';
 import Timer from './Timer';
-import Button from './Button';
+import Button from './common/Button';
 import StepSelector from './StepSelector';
-import Modal from './Modal';
+import Modal from './common/Modal';
 
 // utils
 // import storage from '../utils/storage';
@@ -25,14 +25,37 @@ import 'react-toastify/dist/ReactToastify.css';
 const stepOptions = [5, 10, 15, 20, 25, 30];
 
 
+
 class App extends Component {
 
-  componentDidMount() {
-    //fetch
-    this.props.onFetchContacts();
-    this.props.onTheme();
 
-  }
+
+  // componentDidMount() {
+  //   //fetch
+  //   this.props.onFetchContacts();
+  //   this.props.onTheme();
+
+  // }
+
+  // componentDidMount() {
+  //   console.log("componentDidMount");
+  //   const persistedContacts = storage.get("contacts");
+
+  //   if (persistedContacts) {
+  //     this.props.contacts = persistedContacts;
+  //   }
+  // }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log("componentDidUpdate");
+  //   // console.log(this.props.contacts);
+  //   // console.log(prevProps);
+  //   const contacts = this.props.contacts;
+
+  //   if (prevProps.contacts !== contacts) {
+  //     storage.save('contacts', contacts);
+  //   }
+  // }
 
   render() {
     const { contacts, isLoadingContacts, visibleContacts, onIncrement, counterValue } = this.props;
